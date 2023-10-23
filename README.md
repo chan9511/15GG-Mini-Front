@@ -1,56 +1,50 @@
 # JYP 프로젝트
 
-- 프로젝트 데이터 : https://www.kaggle.com/datasets/shilongzhuang/telecom-customer-churn-by-maven-analytics
-- 협업 툴 : Google docs, Slack
-- 기술 스택 : Python, Google Colab, jupyter notebook
-- 프로젝트 기간 : 2023.06.12-2023.06.23.
+- 프로젝트 데이터 및 API : https://developer.riotgames.com/
+- 협업 툴 : Confluence, Slack
+- 기술 스택 : React, JS, HTML/CSS, Spring, JWT, MySQL, mongoDB, Python
+- 프로젝트 기간 : 2023.08.23 - 2023.10.24
 ---
-팀 멤버
-* 최재혁
-* 김찬동
-* 김민희
-* 윤지훈
-* 이서영 
-* 유윤수
+## 팀 멤버
+* 정은아 - DB
+* 김찬동 - BackEnd
+* 이상훈 - FrontEnd
 ---
+## 프로젝트 소개
 
+ 타 사이트들의 단점을 보완하여 클릭수를 줄여 빠르고 원하는 데이터를 쉽게 접할 수 있는 전적검색 사이트입니다.
+
+---
 ## <프로젝트 개요>
-![화면 캡처 2023-06-29 120224](https://github.com/jea0902/mini_project_ML/assets/62950552/cf5b7442-73e4-481d-b0b9-1f54849ce9e1)
+
 ---
 ## <프로젝트 내용>
-1. ML
-    * 데이터 파악
-    * 프로젝트 목표 설정
-    * 데이터 전처리
-    * 데이터 시각화
-    * 데이터 인코딩
-    * 모델 학습
-    * 모델 평가, 검증
+1. FrontEnd
+    * UI/UX 설계
+    * React 기반 웹 페이지 컴포넌트 설계
+    * 웹 페이지 상호작용
+    * 
+    * 
 
-2. 예측 모델
-   * 로지스틱 회귀
-   * 랜덤포레스트
-   * 그래디언트 부스팅
-   * XGBoost
-   * SVC
-   * 의사결정트리
-   * 라이트GBM
-
-    위 모델들을 ROC곡선, 기능 중요도에 대한 SHAP,
-    순열, Feature 중요도로 검증,평가하여
-
-    과적합 규제 기능이 강하고,
-    분류와 회귀영역에서 뛰어난 예측 성능을 가졌기에
-    XGBoost를 최종 모델로 선정
-   
-3. 솔루션 제안
-   * 도출된 인사이트들로 솔루션 제안
+2. BackEnd
+   * 스프링 부트 기반 백엔드 서버 설계
+   * 다양한 요청에 대한 예외 처리 및 동적 로직 실행 지원
+   * 
+   * 
+   * 
+      
+3. DataBase
+   * 서비스 맞춤 데이터 모델링
+   * 파이프라인 설계 및 최적화
+   * OOP 기반 DB 설계 전반적 설계
+   * 
+   * 
 
 ---
 ## <프로젝트 정리 - 발표자료>
-https://github.com/jea0902/mini_project_ML/blob/main/1%EC%A1%B0_%ED%94%84%EB%A1%9C%EC%A0%9D%ED%8A%B8_%EC%B5%9C%EC%A2%85pt.pdf
+
 ---
-### <프로젝트 회고 - 2023.07.01까지 끝낼 예정>
-   * 다양한 특성을 그룹화 하여 유의미한 특성을 끌어내지 못한 점이 아쉬웠다.
-   * AUC 검증 점수나 코드 구현이 미흡했다.
-   * EDA를 통해 구체적으로 설명하지 못한 게 아쉬웠다.
+### <프로젝트 회고>
+   * 
+   * 
+   * 
