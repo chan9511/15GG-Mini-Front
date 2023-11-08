@@ -1,71 +1,107 @@
-# JYP 프로젝트
+# PLAY_DATA_MINI_PROJECT3
 
-- 프로젝트 데이터 및 API : https://developer.riotgames.com/
-- 협업 툴 : Confluence, Slack
-- 기술 스택 : React, JS, HTML/CSS, Spring, JWT, MySQL, mongoDB, Python
-- 프로젝트 기간 : 2023.08.23 - 2023.10.24
+
+<h2>기여자 (Contributors) ✨</h2>
+<table align="center">
+  <tr>
+    <td align="center">
+      <a href="https://github.com/Hoonscucci">
+        <img src="https://avatars.githubusercontent.com/u/132039559?v=4"width="145px;" alt=""/>
+        <br />
+        <sub>
+          <b>이상훈</b>
+        </sub>
+      </a>
+      <br />
+      <a href="https://github.com/Hoonscucci" title="Code">🏠</a>
+    </td>
+    <td align="center">
+      <a href="https://github.com/chan9511">
+        <img src=https://avatars.githubusercontent.com/u/131934006?v=4"width="100px;" alt=""/>
+        <br />
+        <sub>
+          <b>김찬동</b>
+        </sub>
+      </a>
+      <br />
+      <a href="https://github.com/chan9511" title="Code">🏠</a>
+    </td>
+  </tr>
+</table>
+
+## 리그오브 레전드 계정 검색 시스템 (그래서 님 티어가?)
+
+![메인화면](https://github.com/Hoonscucci/play_data_mini_project3/assets/132039559/0ddcda8a-0ef1-4289-b085-092666c0151b)
+
+
+### 주제 탐색
+##### 1. 리그오브 레전드 소환사 전적 그래프, 소환사 정보, 게임정보, 전적 로그 한눈에 보기
+> 필요스킬
+>  > React.js
+>  >
+>  > Riot API
+##### 2. 리그오브 레전드 아이템 및 챔피언간 조합 분석 및 확률 통계 한눈에 보기
+> 필요스킬
+>  > Django(MVC패턴)
+>  >
+>  > Numpy,Pandas... 등 분석 기법
+
+
+### 주제선정
+> 프로젝트 기간이 3일인점을 고려하여 2번 주제보다는 1번 주제가 더 적합하다 생각되어 1번으로 진행 했습니다.
+> 
+> 프로젝트 제출 후 더 디벨롭 시켜서 2번까지 확장, 적용 해볼수 있을것 같습니다.
+
+
+### 사용 라이엇 API 정리
+![라이엇 api 홈페이지](https://github.com/Hoonscucci/play_data_mini_project3/assets/132039559/a11b707b-9172-45d6-be3a-3986c077332c)
+##### 1. SUMMONER-V4 - username 으로 검색하여 나오는 id와 puuid를 사용하여 다른 테이블에 사용
+> 필요 검색 키워드 - username
+> 
+> 해당 유저의 정보를 반환
+> 
+> Riot API 에서 매치 내용이나 랭크를 보려면 account id, puuid가 필요한데 여기서 확인 가능
+
+##### 2. LEAGUE-V4 - username으로 검색하여 나오는 id사용 하여 검색
+> 필요 검색 키워드 - SUMMONERID
+>
+> 티어 확인가능 ex> 플래티넘
+>
+> 해당 티어에서의 점수 확인가능 ex> 43
+>
+> 랭크 통한 승, 패 확인가능
+
+
+##### 3. MATCH-V5 - username에서 나오는 puuid를 사용하여 검색
+> 필요 검색 키워드 - puuid
+>
+> puuid를 사용하여 해당 계정의 최근 매치의 matchid를 받아온다
+>
+> matchid를 입력하여 matchid 마다의 내용 확인 가능
+>
+> 같은팀, 상대팀 총 10명의 플레이어들의 해당 경기에서의 내용이 들어 있음
+>
+> 그중 우리가 검색하려는 계정의 정보만 추출 하여 사용하는 코드를 작성
+
+##### 4. 챔피언 이미지 불러오기 
+> 라이엇 API에는 챔피언 이미지가 없어서 따로 이미지 맵핑을 시켜서 반환했다.
+>  >  https://ddragon.leagueoflegends.com/cdn/13.15.1/img/champion/ (이부분에 챔피언명.PNG를 입력)
+>  >  해당코드로 검색결과 플레이한 챔프명을 받아 이미지를 동시에 띄울수 있게 하였다.
+
+
+![일자별 진행플로우](https://github.com/Hoonscucci/play_data_mini_project3/assets/132039559/6a4b9d55-d323-432b-9976-8c84058cda92)
+
+
+![8-9 todo](https://github.com/Hoonscucci/play_data_mini_project3/assets/132039559/ad71c4ab-2045-4199-b95f-43a7b0f95d8e)
+![8-10 todo](https://github.com/Hoonscucci/play_data_mini_project3/assets/132039559/e9795e34-a183-46e1-bf8c-7a369b127a63)
+![8-11 todo](https://github.com/Hoonscucci/play_data_mini_project3/assets/132039559/326ea2b3-7643-45e3-80af-3899d8189cbb)
 ---
-## 팀 멤버
 
-* 정은아 - DB
-* 김찬동 - BackEnd
-* 이상훈 - FrontEnd
----
-## 프로젝트 소개
+### 최종 결과
 
- 대부분의 게이머들은 전적을 검색한다. 월간 최대 트래픽 3700만 규모인 전적검색 사이트도 있는 만큼,타 사이트들의 단점을 보완하여 클릭수를 줄여 빠르고 원하는 데이터를 쉽게 접할 수 있는 전적검색 사이트입니다.
+![메인화면](https://github.com/Hoonscucci/play_data_mini_project3/assets/132039559/0ddcda8a-0ef1-4289-b085-092666c0151b)
+![검색화면_hoonscucci](https://github.com/Hoonscucci/play_data_mini_project3/assets/132039559/bbec2f8c-5347-43e6-8863-63524dfb58b7)
+![검색화면_타비잭스_티어볼수있음](https://github.com/Hoonscucci/play_data_mini_project3/assets/132039559/9e2158ba-f7b2-4c3f-afb3-8334c7a75d8e)
+![존재하지 않는 계정](https://github.com/Hoonscucci/play_data_mini_project3/assets/132039559/1810e5d2-9b04-4d6e-8a80-60b0e65d657d)
 
 ---
-## <프로젝트 개요>
-
----
-## <프로젝트 내용>
-
-### 1. FrontEnd
-* UI/UX 설계
-* React 기반 웹 페이지 컴포넌트 설계
-* 웹 페이지 상호작용
-* 
-* 
-
-### 2. BackEnd
-* 스프링 부트 기반 백엔드 서버 설계
-* 다양한 요청에 대한 예외 처리 및 동적 로직 실행 지원
-*
-*
-* 
-      
-### 3. DataBase
-* 서비스 맞춤 데이터 모델링
-* 파이프라인 설계 및 최적화
-* OOP 기반 DB 설계 전반적 설계
-* 
-* 
-
----
-## <서비스 구현>
-### 1. 유저 전적검색 서비스
-* Riot에서 제공하는 오픈 API를 접근하여 비동기로 받아오는 구조이기에 빠른 속도를 유지하기 위해
-심플한 레이아웃으로 사이트를 구성.
-* 빠른 페이저 랜더링을 유지하기 위해 받아오는 데이터 중 불필용한 데이터를 줄이고 에센셜한 게임내의 퍼포먼스 지표만 선별하여 평소에 게이머들이 자주 접했던 UI/UX에 초점을 맞추었다.
-### 2. 위젯 기능
-* 홈화면에 바로 표현하여 크게 두가지 섹션으로 나뉘고, 속도가 생명인 서비스에서 유저들의 정보 가독성을 위하여 크게 두 축으로 구성을 하였고, 최대한 유저의 시간을 빼앗지 않게 클릭수와 시간을 줄이도록 화면을 설계.
-* 해당 기능이 로그인 회원만 이용할 수 있는 컨텐츠로 한 번의 로그인만 해놓는다면 회원이 이전에 사용하였던 위젯 세팅을 저장하여 다음번에 사용할 때, 클릭을 최소한으로 이루어져도 정보를 확인할 수 있도록
-### 3. 챔피언 분석 기능
-* 데이터 수집
-
-* DB를 활용한 아이템, 스킬트리, 승률 통계 시각화
----
-## <프로젝트 정리 - 발표자료>
-
----
-## <프로젝트 정리 - 시연영상>
-
----
-### <프로젝트 회고>
-
-   * 프론트개발을 하면서 기능구현도 중요했지만, 리액트에서 제공하는 hooks 중 하나인 메모이제이션과 같은 최적화기능들을 사용하지 않아, 아쉬웠습니다.
-기회가 된다면, 리액트hooks와 상태관리툴을 좀 더 공부해서 적용해서 개발하고 싶습니다.
-   * 백엔드 설계를 처음 접하다 보니 우여 곡절이 많았다 자바가 선행되지 않은점이 발목을 잡았고 다시 자바부터 공부를 했으나 급하게 하다보니 놓친 부분이 많은것 같아 아쉬웠다.
-   * 설계 부분에 있어 정확한 사용 방식과 이유를 알고 진행한게 아니라 당장 눈앞의 문제를 해결하기 위해 사용한 느낌이 있었던 것 같다. 하지만 이러한 경험들로 인하여 백엔드 서버 설계에 대한 틀이 잡혀가고 있음을 확인 할 수 있는 시간 이었다.
-   * 
